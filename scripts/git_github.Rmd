@@ -113,20 +113,26 @@ To create a new branch you have two options. In R-Studio go to the `Git` tab and
 
 ### Merge Branch
 
-If you are ready to make the documents worked on the alternative branch the main ones of your project you need to merge the alternative branch to the main one. Merging branches are a two way steps, i) there is a merge request and a ii) merge confirmation.
+If you are ready to make the documents worked on the alternative branch the main ones of your project you need to merge the alternative branch to the main one. Merging branches are a two way steps, i) there is a pull request and a ii) merge confirmation.
 
-#### Merge request
+#### Pull request
 
-You can see how many branches you have in the github.com page of your project. 
+You can see how many branches you have in the github.com page of your project. Also, github will create an alert message when someone (you or a collaborator) pushes some work on an alternative branch.
 
-![In this case, the project has two branches]()
+![In this case, the project has two branches and an alert message shows up](../figures/git_github/pull_request.png)
 
-If you click in `branches`, you will see all the active branches, the commits that each one has, and a button that says "New pull request"
+You can just click on "Compare & pull request", or, on `branches` where you will see all the active branches, the commits that each one has, and a button that says "New pull request" (I you click in the name of the branch, it will take you to the project within that branch).
 
-![List of branches showing the new pull request]()
+![List of branches showing the new pull request](../figures/git_github/branches_list.png)
+Once in the pull request section, you will need to write a title for the pull request, a description and submit the pull request. Github will automatically look for merging issues (e.g., if there are multiple versions of the same document worked at the same time in the same parts) and if it's all good you will have "requested a merge".
 
-I you click in the name of the branch, it will take you to the project within that branch.
+![In this case, the project has two branches and an alert message shows up](../figures/git_github/pull_requestb.png)
 
+#### Merging branch
+
+For the branch to be merged, someone has to click on `Merge pull request`, write a comment and accept the merge. Once that's done, you can erase the branch by clicking on the trashcan icon. If you choose not to merge a red button will pop out and a "Delete branch" too. At the end, you will have a documented, version control of your pull requests.
+
+![Summary showing new_branch pull request](../figures/git_github/pull_request_hist.png)
 
 **TASK:** Crete a new branch do some alterations to an existing document and merge that branch to the main.
 

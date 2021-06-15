@@ -92,19 +92,49 @@ Go to the *Issues* tab and click on the green button "New issue". Some things in
 
 Branches are a way you can explore parts of your project without altering the main product. Think about it this way. 
 
-Lets imagine you just finished all of your paper's analysis in the "master" branch. Analysis, results, figures, everything is nicely done. You send the paper to your co-authors and one of them asks you what would happen if, instead of averaging your results by 10 years you average them by 20 years. A relative big task that will take you some time to compute. 
+Lets imagine you just finished all of your paper's analysis in the `master` branch (all projects start on this branch). Analysis, results, figures, everything is nicely done. You send the paper to your co-authors and one of them asks you what would happen if, instead of averaging your results by 10 years you average them by 20 years. A relative big task that will take you some time to compute. 
 
-In the heat of the moment you forget about branches and comment out some parts of your code, change parts of the code, change your plots, axis, and all the shenanigans. You get the final results and present it to the co-authors. Guess what, the co-author decided that the original analysis was fine. 
+In the heat of the moment you forget about branches, go to your analysis script, and comment out some parts of your code, change parts of the code, change your plots, axis, and all the shenanigans. You get the final results and present it to the co-authors. Guess what, the co-author decided that the original analysis was fine. 
 
-At this point you made sooooooo many changes that it takes you a week to figure out where you were in the original analysis.
+At this point you made sooooooo many changes in the analysis script that it takes you a week to figure out where you were in the original analysis. Also, you can't really just go back on the version control because you made substantial changes to the manuscript in parallel and you would loose those, oh my!
 
-On a parallel universe, you created a new branch called `time_test` work on this branch change all your code and got final results. In this universe your co-author and you decided that this is a better approach. In this case you do a `Pulll Request` and eventually *merge* the `time_test` branch to the `master`. 
-
-
+On a parallel universe, you created a new branch called `time_test` to work on this request. In this universe your co-author and you decided that this is a better approach. In this case you do a `Pulll Request` and eventually *merge* the `time_test` branch to the `master`. Now, your `master` branch includes the analysis script of the `time_test` and the changes to your manuscript file are not lost. 
 
 ![Github Branches](https://i2.wp.com/build5nines.com/wp-content/uploads/2018/01/GitHub-Flow.png?fit=900%2C310&ssl=1)
 
 
+### New branch
+
+To create a new branch you have two options. In R-Studio go to the `Git` tab and click on that "purple funny icon". A pop-out window will appear, just type in the new branch name and that's it. Note that the project will immediately switch to work on that branch. 
+
+![Pop-out window for new branch](../figures/git_github/new_branch.png)
+
+**Note**: R-Studio will always display the name of the branch you are working on right next to the funny-looking icon. To switch between branches you simple need to click the name and choose the one you want to work on. Allways comit your work before switching branches. 
+
+### Merge Branch
+
+If you are ready to make the documents worked on the alternative branch the main ones of your project you need to merge the alternative branch to the main one. Merging branches are a two way steps, i) there is a pull request and a ii) merge confirmation.
+
+#### Pull request
+
+You can see how many branches you have in the github.com page of your project. Also, github will create an alert message when someone (you or a collaborator) pushes some work on an alternative branch.
+
+![In this case, the project has two branches and an alert message shows up](../figures/git_github/pull_request.png)
+
+You can just click on "Compare & pull request", or, on `branches` where you will see all the active branches, the commits that each one has, and a button that says "New pull request" (I you click in the name of the branch, it will take you to the project within that branch).
+
+![List of branches showing the new pull request](../figures/git_github/branches_list.png)
+Once in the pull request section, you will need to write a title for the pull request, a description and submit the pull request. Github will automatically look for merging issues (e.g., if there are multiple versions of the same document worked at the same time in the same parts) and if it's all good you will have "requested a merge".
+
+![In this case, the project has two branches and an alert message shows up](../figures/git_github/pull_requestb.png)
+
+#### Merging branch
+
+For the branch to be merged, someone has to click on `Merge pull request`, write a comment and accept the merge. Once that's done, you can erase the branch by clicking on the trashcan icon. If you choose not to merge a red button will pop out and a "Delete branch" too. At the end, you will have a documented, version control of your pull requests.
+
+![Summary showing new_branch pull request](../figures/git_github/pull_request_hist.png)
+
+**TASK:** Crete a new branch do some alterations to an existing document and merge that branch to the main.
 
 
 ## Project webpage
