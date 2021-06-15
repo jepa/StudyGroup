@@ -15,6 +15,8 @@ This session covers the basics for working with git and github in R.
 
 # Instructions
 
+Please make sure you have covered all of the following steps *before* the session date. We will not spend time on these steps during the session and some of them are essential for it.
+
 -  **gitHub account.** You will nee a [gitHub](https://github.com/) account. Note that if you get some cool [benefits](https://education.github.com/benefits) if you are a student or a teacher.
 
 - **Git.** Before starting this session make sure you have `git` installed on your computer. The [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) web page has a very straightforward way to install it. You can also look at this [gitHub tuttorial](https://github.com/git-guides/install-git) that includes a way to install it from the [gitHub Desktop app](https://desktop.github.com/).
