@@ -1,5 +1,7 @@
 # Github session
 
+![Octocat](https://github.githubassets.com/images/modules/logos_page/Octocat.png)
+
 This session covers the basics for working with git and github in R. 
 
 **In this session you will learn how to;**
