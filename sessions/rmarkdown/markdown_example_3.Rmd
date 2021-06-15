@@ -1,0 +1,113 @@
+---
+title: "Non Dynamic stuff with R Markdown, pdf"
+author: "JEPA"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  pdf_document:
+    fig_height: 2
+    fig_width: 3
+    highlight: haddock
+    toc: yes
+  word_document:
+    toc: yes
+---
+
+``` {r setup, echo = FALSE, eval = TRUE, message = FALSE, warning = FALSE}
+library(dplyr)
+library(tidyr)
+#library(stringr)
+library(ggplot2)
+# install.packages('DT')
+library(DT)
+library(knitr)
+library(kableExtra)
+library(seaaroundus)
+```
+
+![Crab Fishing Boat of Alaska](img/Crab_fishing_boat.png)
+
+\clearpage
+
+# Introduction
+
+We then look at the specific cases of the [International Pacific Halibut Commission](https://iphc.int/) that manages pacific halibut (*Hippoglossus stenolepis*) and a resource sharing agreement in the Gulf of Maine for cod (*Gadus morhua*), haddock (*Melanogrammus aeglefinus*) and yellowtail flounder (*Limanda ferruginea*)[^1]. Results show that, even under a low emission scenario, most transboundary fish stocks sharing ratios, i.e., the proportion of the total catch of a fish stock taken by a given country, will change by 2050 relative to present in the direction as expected from the effects of ocean warming.
+
+## Keywords
+
+- Halibut
+- IPHC
+- Climate Change
+- Atlantic cod
+
+[^1]: CIA. (2017). The US-Canadian Dispute Over the Georges Bank, 1–10.
+
+
+```{r Alaska_Data, echo=F, eval=T}
+
+Data <- catchdata(
+  region = "fao",
+  id = 34, 
+  measure = "tonnage",
+  dimension = "country"
+  )
+
+Data %>% 
+  filter(years > 2010) %>% 
+  tidyr::gather("Country", "Catch", 2:5) %>% 
+  select(Year = years, Catch) %>% 
+  kable(caption = "Wild fish capture of Spain, Morocco, and Senegal from 2011 to 2014") %>% 
+  group_rows("Spain", 1, 4, latex_gap_space = "0.5em") %>% 
+  group_rows("Morroco", 5, 8, latex_gap_space = "1em") %>% 
+  group_rows("Senegal", 9, 12, latex_gap_space = "1em") %>% 
+  group_rows("Japan", 13, 16, latex_gap_space = "1em") %>% 
+  kable_styling(latex_options = c("repeat_header"))
+  
+
+```
+
+# The Fisheries
+
+In the region, there are `r length(names(Data)[2:11])` fishing nations including `r names(Data)[2:5]`. The fishery was saved due to strict mitigation measures and the implementation of policies. Catch has fluctuated over time since the begining of the capture record `r min(Data$years, na.rm = T)` (Figure 1) with *Spain* dominating landings from the **1970's** to the late 90's when Morroco increased captures. 
+
+```{r Historic_Plot, echo=F, eval=T, fig.align="c",fig.height=4,fig.width=7,fig.cap="Historic Landings for all nations between 1950 - 2010. Data from seaaroundus.org"}
+
+Data %>% 
+  tidyr::gather("country","catch",spain:latvia) %>% 
+  ggplot() +
+  geom_line(
+    aes(
+      x = years,
+      y = catch/10000,
+      colour = country
+    )
+  ) +
+  theme_classic()
+
+```
+
+The main reason why Spain reduce its fish capture was because of a stron policy implementation on the TAC based on the following equation:
+
+\begin{center}
+$Z = \frac{\bar{x} - \mu_0}{\sigma / \sqrt{n}}$
+\end{center}
+
+where all equations are completely made up!
+
+While this was true for Spain, Morroco had a more relaxed policy based on the following equation:
+
+\begin{equation}
+\label{eq:2}
+FR = \sum_{i = 1}^n (L_{i}*b_{i})*b*P_{i} + (L_{i}*a_{i}) *a*P_{i}
+\end{equation}
+
+They actually used Latex in the document to write that equation, just like this one: $BB_f=(M_S+D_S)*fec$, where $BB_F$ is *Baby Fish*; $M_F$ is mummy Fish and $D_F$ is Daddy Fish, and *fec* is fecundity.
+
+
+
+# Observations
+
+Data was obtain from, [Spain](http://www.seaaroundus.org/?gclid=Cj0KEQjw8tbHBRC6rLS024qYjtEBEiQA7wIDeUk0hWAQ_MkdhsIBczR7jaN3qC4ndTuExVUNThk0g2kaArm88P8HAQ) fisheries data from Sea Around Us.
+
+
+**Note, all text here is copy-paste from Wikipedia and MUST NOT BE taken seriouslly ;)**
+
