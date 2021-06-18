@@ -39,6 +39,8 @@ Please make sure you have covered all of the following steps *before* the sessio
 
 - **Commit.** *Do often! For example, after all major step in your work-flow.* Saves the changes you made to a document *in your computer*. Note that if two people make changes to the same document, there will be some conflicts that will need to be fix before you "pull".
 
+- **Fork.** *You will fork everytime you want to collaborate with someone*. Forking basically means that you create your personal copy of a project. When modifying the project, you will have to "pull request" to merge your modification to the main project
+
 - **Pull.** *Do it every time you open the project*. Every time you "pull", you update the project and incorporate any changes "pushed" to the branch.
 
 - **Push.** *Do it at the end of each working session*. This is the process where you send your changes ("commits") to the project's hub and merge them to the branch you are working with. 
