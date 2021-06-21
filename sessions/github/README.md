@@ -19,7 +19,7 @@ Please make sure you have covered all of the following steps *before* the sessio
 
 - **git.** *Essential.* Before starting this session make sure you have `git` installed on your computer. Here are some usefull ressources:
 
-  - [git wevpage](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git), has a very straightforward way to install it.
+  - [git webpage](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git), has a very straightforward way to install it.
 
   - [GitHub tuttorial](https://github.com/git-guides/install-git) that includes a way to install it from the [gitHub Desktop app](https://desktop.github.com/). 
 
