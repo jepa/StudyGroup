@@ -1,5 +1,5 @@
 ---
-title: "Intro to gitHub"
+title: "Intro to GitHub"
 author: "Juliano Palacios Abrantes"
 date: "Last updated 15/06/2021"
 output: 
@@ -9,6 +9,7 @@ output:
     toc_depth: 3
     toc_float:
       collapsed: false
+    theme: darkly
 ---
 
 # Create a new repository
@@ -27,19 +28,19 @@ There are two (at least!) ways to create a new repository. You can choose the on
 
 ## **GitHub web page**
 
-From this step you will create the repository from the gitHub web page. Go to gitHub and select the + sign in the top right, a sub menu will drop, just choose "New repository." After that just fill in the information and your repository will be created.
+From this step you will create the repository from the GitHub web page. Go to GitHub and select the + sign in the top right, a sub menu will drop, just choose "New repository." After that just fill in the information and your repository will be created.
 
 ### Link the repository with R-Studio.
 
-Once you create the repository you will have to link it to R-Studio so you can control your workflow. The way you create the repository (trough the webpage or the gitHub desktop; see below) will mark the way you link it to R-Studio. If you created the repository on the website, follow these steps to link it to R:
+Once you create the repository you will have to link it to R-Studio so you can control your workflow. The way you create the repository will mark the way you connect. If you created the repository on the website, follow these steps to link it to R:
 
-1. Open R-Studio, go to "File" -> "New Project". Alternatively, on the top right corner you should see the legend "Project (None)", the first option once you click should be "New Project...". A pop-out window should appear. Go on and click on "Version Control" and then "Git". You should get to the third panel below.
+1.- Open R-Studio, go to "File" -> "New Project". Alternatively, on the top right Corner will say (should say) "Project (None)", the first option once you click should be "New Project...". A pop-pit window should appear. Go on and click on "Version Control" and then "Git". You should get to the third panel below.
 
 ![New Project Wizard workflow (Mac).](./figures/sync_repo_rstu.png)
 
-2. Once there, go to your repository home screen in the browser and click on the green button that says `Code`. A pop up window should come out. Copy the "HTTPS" link (In the picture below, the link would be `https://github.com/jepa/StudyGroup.git`) 
+2.- Once there, go to your repository home screen in the browser and click on the green button that says "Code". A pop up window should come out. Copy the "HTTPS" link (In the picture below, the link would be `https://github.com/jepa/StudyGroup.git`) 
 
-3. Go back to R-Studio and paste the link on the "Repository URL:" of your New Project Wizard window. The *Project directory name* will automatically show the name of your repo. (I suggest you keep the same). Finally, select the sub-directory in your computer where you will keep the repository. Click on "Create Project" and let the magic begin... 
+3. - Go back to R-Studio and paste the link on the "Repository URL:" of your New Project Wizard window. The *Project directory name* will automatically show the name of your repo. (I suggest you keep the same). Finally, select the sub-directory in your computer where you will keep the repository. Click on "Create Project" and let the magic begin... 
 
 ![New project Wizard workflow.](./figures/sync_repo_github.png)
 
@@ -47,27 +48,27 @@ Once you create the repository you will have to link it to R-Studio so you can c
 
 This might be the most straight forward way to create a new repository from your computer. If you downloaded [gitHub Desktop](https://desktop.github.com/), go to `File` -> New Repository, a `Create a New Repository` window like the one below should pop out.
 
-![New Repo. pop-out window from gitHub Desktop for Mac](./figures/new_repo.png)
+![New Repo. pop-out window from GitHub Desktop for Mac](./figures/new_repo.png)
 
 ### Link the repository with R-Studio.
 
 Now we go to R-Studio to link it to the new repository in one single step:
 
-1.- Open R-Studio, go to "File" -> "New Project". Alternatively, on the top right corner you should see the legend "Project (None)", the first option once you click should be "New Project...". A pop-pit window should appear. Go on and click on "Existing Directory" and then "Browse". Now, locate the Repository you created on the gitHub Desktop and that's it!
+1.- Open R-Studio, go to "File" -> "New Project". Alternatively, on the top right Corner will say (should say) "Project (None)", the first option once you click should be "New Project...". A pop-pit window should appear. Go on and click on "Existing Directory" and then "Browse". Now, locate the Repository you created on the GitHub Desktop and that's it!
 
 Regardless of the method you choose. Your R-Studio project should look something like this:
 
-![Project repository. Note the project name at the top right corner, the `Git` environment and the files created](./figures/rstudiorepo.png)
+![](./figures/rstudiorepo.png)
 
-# Unig gitHub
+# Unig GitHub
 
 ## Solo mode
 
-Technically speaking, gitHub was designed for collaborative work. However, I find it SUPER useful for solo work as well. Also, the more you work on it as a solo user, the more prepared you'll be for when you have to collaborate. In this section we will cover the basics of version control and some of the *tools* gitHub has to offer such as *Issues*, *Branches*, and *web page*. 
+Technically speaking, GitHub was designed for collaborative work. However, I find it SUPER useful for solo work as well. Also, the more you work on it as a solo user, the more prepared you'll be for when you have to collaborate. In this section we will cover the basics of version control and some of hte *tools* GitHub has to offer such as *Issues*, *Branches*, and *web page*. 
 
 ### Commit, push, pull, repeat.
 
-This is the base of version control. These steps are the responsible for saving your work flow, uploading it to the project repository and downloading it to your computer, i.e. sync. So, now that we have created our first repository we can start to work on it! *Note*: check the [README.md file](https://github.com/jepa/StudyGroup/blob/main/sessions/github/README.md) if you can't remember what each concept means.
+This is the base of version control. These steps are the responsible for saving your work flow, uploading it to the project repository and downloading it to your computer, i.e. sync. So, now that we have created our first repository we can start to work on it!
 
 **TASK:** Lets create a file and push it!
 
@@ -75,7 +76,7 @@ Open an *R* script and write whatever you want on it.  Once we have made some ch
 
 ![Commit window](./figures/commit.png)
 
-Once we have commited what we want for the day we can click on the green arrow on the top right and `push` them to the Repo (a.k.a. merge them). Now go to your repository online and you will see your commit reflected in the projects page. 
+Once we have done the Commits we want for the day we can push them to the Repo (a.k.a. merge them). Now go to your repository online and you will see your commit reflected in the projects page. 
 
 ## Collaborative mode, ON! 
 
@@ -97,41 +98,39 @@ In the top we see the branch we are working on and the branch we want to merge w
 
 ![Pull Request main window](./figures/pull_request_commit.png)
 
-Now that we are sure this is what we want we click on `Create a Pull request`. The next window will show us a summary of the pull request. Note that it opens like a "chat" mode where users can comment, accept or reject the request.
+Now that we are sure this is what we want we click on "Create a Pull request". The next window will show us a summary of the pull request. Note that it opens like a "chat" mode where users can comment, accept or reject the request.
 
 ![Pull Request summary window](./figures/pull_request_commit_b.png)
 
 ### Merging 
 
-Now, because I am the only *owner* of the repository, I am the only one with the power of *accepting* you `Pull Request`. Note that the repository now shows "1" `Pull request` and when I open it, I get to a similar page than you. The main difference is that I can `Merge pull request`. Now your work is reflected in the project's repository and we can advance to the next task :) 
+Now, because I am the only *owner* of the repository, I am the only one with the power of *accepting* you `Pull Request`. Note that the repository now shows "1" `Pull request` and when I open it, I get to a similar page than you. The main difference is that I can `Merge pull request`.   
 
 
 ## gitHub tools and best practices
 
 ### The README file.
 
-The `README.md` files are one of the most useful tools of gitHub. These files are shown directly in the repository and can work as a guidance to your repo. Let's take a moment to write our `README.md` on the repository we previouslly created. There is no universal template, but here are some examples; [FishForVisa](https://github.com/jepa/FishForVisa), [OHI-Science](https://github.com/OHI-Science/data-science-training).
+The `README.md` files are one of the most useful tools of GitHub. These files are shown directly in the repository and can work as a guidance to your repo. Let's take a moment to write our `README.md`. Here are some examples; [This Repo](https://github.com/jepa/StudyGroup), [FishForVisa](https://github.com/jepa/FishForVisa), [OHI-Science](https://github.com/OHI-Science/data-science-training).
 
-**TASK:** Take some time to populate our `README.md` file. Remember, every time you make a change to the repository you will need to `commit` that change
+**TASK:** Take some time to populate our `README.md` file. Remember, every time you make a change to the repository you will need to "Commit" that change
 
 ### Issues
 
-How many of you have comment on your code things like `# Change this value when new data arrive"` and then completely forgot about it? Well, the *Issues* tab is here for you! Basically, we document all the issues we find in our code, and whether or not we have dealt with them. Issues become a key aspect of collaborative projects and the exchange between collaborators stays there.
+How many of you have comment on your code things like `# Change this value when new data arrive"` and then completely forgot about it? Well, the *Issues* tab is here for you! Basically, we document all the issues we find in our code, and weather or not we have dealt with them. Issues become a key aspect of collaborative projects and the exchange between collaborators stays there.
 
 #### Setting an Issues template
 
-I like to have a standardized way of presenting issues. For that, go to the `Insights` tab, select *Community* on the left-side menu, and click on `Add` *Issues templates*. Depends on what the repository is, you can choose from some options. For my personal projects I just use a modification of the `Bug template`. 
+I like to have a standardized way of presenting issues. For that, go to the *Insights* tab, select *Community* on the left-side menu, and click on `Add` *Issues templates*. Depends on what the repository is, you can choose from some options. For my personal projects I just use a modification of the `Bug template`. 
 
 **TASK:** Create an Issue template for your repository
 
 #### Create a New Issue
 
-Go to the `Issues` tab and click on the green button `New issue`. Some things in the issue:
+Go to the *Issues* tab and click on the green button "New issue". Some things in the issue:
 
 - **Assignees**: When collaborating, you can assign specific colaborators to specific issues. 
 - **Labels**: A nice way to keep track of similar issues (e.g., coding, data, function)
-
-Note that your repository will keep track of all the oppen issues but also all the closed ones as well so you can have full control of the workflow 
 
 **TASK:** Create an Issue with a Label. Respond to that issue and close it. 
 
@@ -152,11 +151,11 @@ On a parallel universe, you created a new branch called `time_test` to work on t
 
 #### New branch
 
-To create a new `branch` you have two options. In R-Studio go to the `Git` tab and click on that "purple funny icon". A pop-out window will appear, just type in the new branch name and that's it. Note that the project will immediately switch to work on that branch. 
+To create a new branch you have two options. In R-Studio go to the `Git` tab and click on that "purple funny icon". A pop-out window will appear, just type in the new branch name and that's it. Note that the project will immediately switch to work on that branch. 
 
 ![Pop-out window for new branch](./figures/new_branch.png)
 
-**Note**: R-Studio will always display the name of the `branch` you are working on right next to the funny-looking icon. To switch between branches you simple need to click the name and choose the one you want to work on. Allways `commit` your work before switching branches. 
+**Note**: R-Studio will always display the name of the branch you are working on right next to the funny-looking icon. To switch between branches you simple need to click the name and choose the one you want to work on. Allways comit your work before switching branches. 
 
 #### Merge Branch
 
@@ -164,20 +163,20 @@ If you are ready to make the documents worked on the alternative branch the main
 
 ##### Pull request branch
 
-You can see how many branches you have in the github.com page of your project. Also, gitHub will create an alert message when someone (you or a collaborator) pushes some work on an alternative branch.
+You can see how many branches you have in the github.com page of your project. Also, github will create an alert message when someone (you or a collaborator) pushes some work on an alternative branch.
 
 ![In this case, the project has two branches and an alert message shows up](./figures/pull_request.png)
 
-You can just click on `Compare & pull request`, or, on `branches` where you will see all the active branches, the commits that each one has, and a button that says `New pull request` (If you click in the name of the branch, it will take you to the project within that branch).
+You can just click on "Compare & pull request", or, on `branches` where you will see all the active branches, the commits that each one has, and a button that says "New pull request" (I you click in the name of the branch, it will take you to the project within that branch).
 
 ![List of branches showing the new pull request](./figures/branches_list.png)
-Once in the pull request section, you will need to write a title for the pull request, a description and submit the pull request. GitHub will automatically look for merging issues (e.g., if there are multiple versions of the same document worked at the same time in the same parts) and if it's all good you will have "requested a merge".
+Once in the pull request section, you will need to write a title for the pull request, a description and submit the pull request. Github will automatically look for merging issues (e.g., if there are multiple versions of the same document worked at the same time in the same parts) and if it's all good you will have "requested a merge".
 
 ![In this case, the project has two branches and an alert message shows up](./figures/pull_requestb.png)
 
 ##### Merging branch
 
-For the branch to be merged, someone with power (i.e., the repository owner) has to click on `Merge pull request`, write a comment and accept the merge. Once that's done, you can erase the branch by clicking on the trashcan icon. If you choose not to merge a red button will pop out and a `Delete branch` too. At the end, you will have a documented version control of your `Pull requests`.
+For the branch to be merged, someone has to click on `Merge pull request`, write a comment and accept the merge. Once that's done, you can erase the branch by clicking on the trashcan icon. If you choose not to merge a red button will pop out and a "Delete branch" too. At the end, you will have a documented, version control of your pull requests.
 
 ![Summary showing new_branch pull request](./figures/pull_request_hist.png)
 
@@ -214,10 +213,7 @@ At some point we will all have that one conflict of merging that can quickly bec
 
 ![THE error](./figures/push_conflict.png)
 
-Step one: DO-NOT-FREAK-OUT. Looks horrible and full of words like *remote work*... *fast-forwards*... etc. But the truth is, once you figure it out is not *that* bad. 
-
-
-has a way to tell you were the matching versions are. Once you close the window, click on the orange document(s).
+Step one: DO-NOT-FREAK-OUT. Looks horrible and full of words like *remote work*... *fast-forwards*... etc. But the truth is, once you figure it out is not *that* bad. GitHub has a way to tell you were the matching versions are. Once you close the window, click on the orange document(s).
 
 ![GitHub will show you where the conflicts are](./figures/push_conflictb.png)
 

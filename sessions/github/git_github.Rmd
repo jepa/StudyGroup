@@ -9,6 +9,7 @@ output:
     toc_depth: 3
     toc_float:
       collapsed: false
+    theme: darkly
 ---
 
 # Create a new repository
