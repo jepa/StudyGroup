@@ -6,3 +6,10 @@ This is the repository to keep data analysis lessons
 - Colette Wabnitz
 - Juliano Palacios
 
+
+# Now some instructions
+
+# Code of conduct
+
+
+
