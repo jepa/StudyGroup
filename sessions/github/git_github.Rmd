@@ -27,7 +27,7 @@ There are two (at least!) ways to create a new repository. You can choose the on
 
 ## **GitHub web page**
 
-From this step you will create the repository from the GitHub webpage. Go to GitHub and select the + sign in the top right, a sub menu will drop, just choose "New repository." After that just fill in the information and your repository will be created.
+From this step you will create the repository from the GitHub web page. Go to GitHub and select the + sign in the top right, a sub menu will drop, just choose "New repository." After that just fill in the information and your repository will be created.
 
 ### Link the repository with R-Studio.
 
@@ -59,9 +59,15 @@ Regardless of the method you choose. Your R-Studio project should look something
 
 ![](./figures/rstudiorepo.png)
 
-## Commit, push, pull, repeat.
+# Unig GitHub
 
-Now that we have created our first repository we can start to work on it!
+## Solo mode
+
+Technically speaking, GitHub was designed for collaborative work. However, I find it SUPER useful for solo work as well. Also, the more you work on it as a solo user, the more prepared you'll be for when you have to collaborate. In this section we will cover the basics of version control and some of hte *tools* GitHub has to offer such as *Issues*, *Branches*, and *web page*. 
+
+### Commit, push, pull, repeat.
+
+This is the base of version control. These steps are the responsible for saving your work flow, uploading it to the project repository and downloading it to your computer, i.e. sync. So, now that we have created our first repository we can start to work on it!
 
 **TASK:** Lets create a file and push it!
 
@@ -69,32 +75,56 @@ Open an *R* script and write whatever you want on it.  Once we have made some ch
 
 ![Commit window](./figures/commit.png)
 
-Once we have done the Commits we want for the day we can push them to the Repo (a.k.a. merge them).
+Once we have done the Commits we want for the day we can push them to the Repo (a.k.a. merge them). Now go to your repository online and you will see your commit reflected in the projects page. 
+
+## Collaborative mode, ON! 
+
+So now that we know the basis, we can get into collaborative mode. For collaboration, the steps are basically the same with some few extra steps.
+
+**TASK:** Lets all collaborate on the `StudyGroup` project.
+
+### Forking!
+
+First, when we are collaborating we need to `fork` the repository to our gitHub. Go to the web page of our StudyGroup (https://github.com/jepa/StudyGroup) and click on `Fork` on the top right. This will basically create our *own* version of the project. Note that my initial path says `jepa/StudyGroup`, this means that the repository belongs to the user "jepa", what does yours say? 
+
+Now, let's practice and open the repository in your R-studio. Once you have it open, go to the ReadMe file and add your name under "Session Participants", commit and push your change. 
+
+### Pull request commiting
+
+Once we are done with our work, we want to merge it with the project's main branch so all of your collaborators can see what you did. On the github web page we can see that the ReadMe file for our repository now has our name. Go head and click on `Pull request` and the green button `New pull request`. You should see the following window;
+
+In the top we see the branch we are working on and the branch we want to merge with. It should also say "Able to merge" in green. In the middle panel it shows what files you have modified (in this case the `ReadMe`file should show up) and in the bottom the actual modification.
+
+![Pull Request main window](./figures/pull_request_commit.png)
+
+Now that we are sure this is what we want we click on "Create a Pull request". The next window will show us a summary of the pull request. Note that it opens like a "chat" mode where users can comment, accept or reject the request.
+
+![Pull Request summary window](./figures/pull_request_commit_b.png)
+
+### Merging 
+
+Now, because I am the only *owner* of the repository, I am the only one with the power of *accepting* you `Pull Request`. Note that the repository now shows "1" `Pull request` and when I open it, I get to a similar page than you. The main difference is that I can `Merge pull request`.   
 
 
-# Solo GitHub
+## gitHub tools and best practices
 
-Technically speaking, GitHub was designed for collaborative work. However, I find it SUPER useful for solo work as well. Also, the more you work on it as a solo user, the more prepared you'll be for when you have to collaborate. In this section we will cover the following *tools* GitHub has to offer such as *Issues*, *Branches*, and *web page*. 
-
-![](./figures/rstudiorepo.png)
-
-## The README file.
+### The README file.
 
 The `README.md` files are one of the most useful tools of GitHub. These files are shown directly in the repository and can work as a guidance to your repo. Let's take a moment to write our `README.md`. Here are some examples; [This Repo](https://github.com/jepa/StudyGroup), [FishForVisa](https://github.com/jepa/FishForVisa), [OHI-Science](https://github.com/OHI-Science/data-science-training).
 
 **TASK:** Take some time to populate our `README.md` file. Remember, every time you make a change to the repository you will need to "Commit" that change
 
-## Issues
+### Issues
 
 How many of you have comment on your code things like `# Change this value when new data arrive"` and then completely forgot about it? Well, the *Issues* tab is here for you! Basically, we document all the issues we find in our code, and weather or not we have dealt with them. Issues become a key aspect of collaborative projects and the exchange between collaborators stays there.
 
-### Setting an Issues template
+#### Setting an Issues template
 
 I like to have a standardized way of presenting issues. For that, go to the *Insights* tab, select *Community* on the left-side menu, and click on `Add` *Issues templates*. Depends on what the repository is, you can choose from some options. For my personal projects I just use a modification of the `Bug template`. 
 
 **TASK:** Create an Issue template for your repository
 
-### Create a New Issue
+#### Create a New Issue
 
 Go to the *Issues* tab and click on the green button "New issue". Some things in the issue:
 
@@ -103,7 +133,7 @@ Go to the *Issues* tab and click on the green button "New issue". Some things in
 
 **TASK:** Create an Issue with a Label. Respond to that issue and close it. 
 
-## Branches
+### Branches
 
 Branches are a way you can explore parts of your project without altering the main product. Think about it this way. 
 
@@ -118,7 +148,7 @@ On a parallel universe, you created a new branch called `time_test` to work on t
 ![Github Branches](https://i2.wp.com/build5nines.com/wp-content/uploads/2018/01/GitHub-Flow.png?fit=900%2C310&ssl=1)
 
 
-### New branch
+#### New branch
 
 To create a new branch you have two options. In R-Studio go to the `Git` tab and click on that "purple funny icon". A pop-out window will appear, just type in the new branch name and that's it. Note that the project will immediately switch to work on that branch. 
 
@@ -126,11 +156,11 @@ To create a new branch you have two options. In R-Studio go to the `Git` tab and
 
 **Note**: R-Studio will always display the name of the branch you are working on right next to the funny-looking icon. To switch between branches you simple need to click the name and choose the one you want to work on. Allways comit your work before switching branches. 
 
-### Merge Branch
+#### Merge Branch
 
 If you are ready to make the documents worked on the alternative branch the main ones of your project you need to merge the alternative branch to the main one. Merging branches are a two way steps, i) there is a pull request and a ii) merge confirmation.
 
-#### Pull request
+##### Pull request branch
 
 You can see how many branches you have in the github.com page of your project. Also, github will create an alert message when someone (you or a collaborator) pushes some work on an alternative branch.
 
@@ -143,7 +173,7 @@ Once in the pull request section, you will need to write a title for the pull re
 
 ![In this case, the project has two branches and an alert message shows up](./figures/pull_requestb.png)
 
-#### Merging branch
+##### Merging branch
 
 For the branch to be merged, someone has to click on `Merge pull request`, write a comment and accept the merge. Once that's done, you can erase the branch by clicking on the trashcan icon. If you choose not to merge a red button will pop out and a "Delete branch" too. At the end, you will have a documented, version control of your pull requests.
 
@@ -152,15 +182,19 @@ For the branch to be merged, someone has to click on `Merge pull request`, write
 **TASK:** Crete a new branch do some alterations to an existing document and merge that branch to the main.
 
 
-## Project webpage
+### Project web page
 
 GitHub has a cool option that allows you to have an `rmarkdown`-based web-page for your project. The best part of it is that with a couple of clicks, you get a nice template!
 
-Go to *Settings* and click on *Pages* on the left menu (the last one).
+**TASK:** Get a web page for our project
 
+Go to the repository you created (not `StudyGroup`) main page. Go to *Settings* and click on *Pages* on the left menu (the last one). Under `Source` select "main". You will be presented with two options:
 
+- `root`, this option is the most basic one and will use the `ReadMe` file as the web page basis.
 
-# Best practices
+- `docs`, this option will create a web page on a folder named `docs`. You will need to create the folder first.
+
+## Best practices
 
 Note that this is a list mainly reflecting the suggestions from [GitLab](https://about.gitlab.com/topics/version-control/version-control-best-practices/).
 
