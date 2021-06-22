@@ -58,3 +58,5 @@ Please make sure you have covered all of the following steps *before* the sessio
 - [GitLab version control](https://about.gitlab.com/topics/version-control/)
 
 - [Best practices for version control](https://about.gitlab.com/topics/version-control/version-control-best-practices/)
+
+- [Git and GitHub for Poets](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV) *Video material*
