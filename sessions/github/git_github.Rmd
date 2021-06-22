@@ -87,13 +87,13 @@ So now that we know the basis, we can get into collaborative mode. For collabora
 
 First, when we are collaborating we need to `fork` the repository to our gitHub. Go to the web page of our StudyGroup (https://github.com/jepa/StudyGroup) and click on `Fork` on the top right. This will basically create our *own* version of the project. Note that my initial path says `jepa/StudyGroup`, this means that the repository belongs to the user "jepa", what does yours say? 
 
-Now, let's practice and open the repository in your R-studio. Once you have it open, go to the ReadMe file and add your name under "Session Participants", commit and push your change. 
+Now, let's practice and open the repository in your R-studio. Once you have it open, go to the README file and add your name under "Session Participants", commit and push your change. 
 
 ### Pull request commiting
 
-Once we are done with our work, we want to merge it with the project's main branch so all of your collaborators can see what you did. On the github web page we can see that the ReadMe file for our repository now has our name. Go head and click on `Pull request` and the green button `New pull request`. You should see the following window;
+Once we are done with our work, we want to merge it with the project's main branch so all of your collaborators can see what you did. On the github web page we can see that the README file for our repository now has our name. Go head and click on `Pull request` and the green button `New pull request`. You should see the following window;
 
-In the top we see the branch we are working on and the branch we want to merge with. It should also say "Able to merge" in green. In the middle panel it shows what files you have modified (in this case the `ReadMe`file should show up) and in the bottom the actual modification.
+In the top we see the branch we are working on and the branch we want to merge with. It should also say "Able to merge" in green. In the middle panel it shows what files you have modified (in this case the `README`file should show up) and in the bottom the actual modification.
 
 ![Pull Request main window](./figures/pull_request_commit.png)
 
@@ -190,7 +190,7 @@ GitHub has a cool option that allows you to have an `rmarkdown`-based web-page f
 
 Go to the repository you created (not `StudyGroup`) main page. Go to *Settings* and click on *Pages* on the left menu (the last one). Under `Source` select "main". You will be presented with two options:
 
-- `root`, this option is the most basic one and will use the `ReadMe` file as the web page basis.
+- `root`, this option is the most basic one and will use the `README` file as the web page basis.
 
 - `docs`, this option will create a web page on a folder named `docs`. You will need to create the folder first.
 
@@ -205,3 +205,21 @@ Note that this is a list mainly reflecting the suggestions from [GitLab](https:/
 - Obtain feedback through code reviews
 - Identify a branching strategy
 
+
+# The pull conflict... 
+
+At some point we will all have that one conflict of merging that can quickly become a nightmare...This is normally the case when you **FORGOT** to `pull` *before* starting working on a document someone else already worked.
+
+![THE error](./figures/push_conflict.png)
+
+Step one: DO-NOT-FREAK-OUT. Looks horrible and full of words like *remote work*... *fast-forwards*... etc. But the truth is, once you figure it out is not *that* bad. GitHub has a way to tell you were the matching versions are. Once you close the window, click on the orange document(s).
+
+![GitHub will show you where the conflicts are](./figures/push_conflictb.png)
+
+In this case, looks like I also changed the `README` file and created a conflict while showing the collaborative example. This will also reflect on my `README.md` file.
+
+![GitHub will show you where the conflicts are](./figures/push_conflictc.png)
+
+This is an easy case so I can just erase one of the repeated lines, fix the issue, `commit` and then `push` the repo.
+
+![Workflow of conflict solved](./figures/push_conflictd.png)
