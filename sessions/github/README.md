@@ -7,7 +7,7 @@ This session covers the basics for working with git and github in R.
 **In this session you will learn how to;**
 
 - Create new repositories
-- Linking repositories and R-Stdio
+- Linking repositories and R-Studio
 - Issues
 - Branches
 - Web-page
