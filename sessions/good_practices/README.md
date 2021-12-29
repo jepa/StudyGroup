@@ -30,5 +30,8 @@ Get an idea of what are good practices to follow in order to have a cleaner anal
 
 # References and help!
 
-[Good enough practices in scientific computing
+- [Good enough practices in scientific computing
 ](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005510)
+
+- [Creating a README for your dataset](https://mfr.ca-1.osf.io/render?url=https://osf.io/aqxw3/?direct%26mode=render%26action=download%26mode=render)
+- [Cornell's Guide to writing "readme" style metadata](https://data.research.cornell.edu/content/readme)
