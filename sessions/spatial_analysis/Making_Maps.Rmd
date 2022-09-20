@@ -3,6 +3,8 @@ title: "Mapping Session"
 author: "Juliano Palacios Abrantes"
 date: "05/11/2019"
 output: pdf_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
@@ -25,8 +27,13 @@ packages <- c("tidyverse",
 
 ipak(packages)
 
-devtools::install_github("raquamaps/aquamapsdata")
-download_db(force=TRUE)
+# devtools::install_github("raquamaps/aquamapsdata")
+# download_db(force=TRUE)
+
+
+# Needs to convert to D2
+# Fix new updates of sf package
+sf::sf_use_s2(use_s2 = FALSE)
 
 ```
 
@@ -48,6 +55,7 @@ plot(land110)
 If you want to fill in the land, you should use a land shapefile. If you want only the outline of the continents/islands, use a coastline file. 
 
 ```{r, eval = T}
+
 coast110 <- ne_download(scale = 110, 
                         type = 'coastline',
                          category = 'physical')
@@ -72,6 +80,7 @@ ggplot(coast110_sf) +
 ```
 
 Alternatively, you might want country level data like in making a world map. 
+
 ```{r, eval = T}
 
 country110 <- ne_countries() #natural earth countries
@@ -84,13 +93,19 @@ x <- ne_download(scale=110,
 country110_sf <- st_as_sf(country110)
 
 ggplot(country110_sf) + 
-  geom_sf(aes(fill=as.factor(mapcolor9))) +
-  theme(legend.position="none") + 
+  geom_sf(aes(fill = as.factor(mapcolor9))) +
+  theme(legend.position="none") + # Legend wont show up (try change it to 'right')
   scale_fill_brewer(palette="Greys")
 
+# Maybe you want a map all grey
 ggplot(country110_sf) + 
   geom_sf(fill="grey50") +
   theme(legend.position="none")
+
+
+
+
+
 ```
 
 But, it's hard to see what's going on at a smaller level with this world level data. You have two options:  
